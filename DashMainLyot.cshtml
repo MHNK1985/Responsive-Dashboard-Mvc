@@ -1,0 +1,639 @@
+﻿<html lang="en" data-textdirection="rtl" class="loading">
+<head>
+    @*
+       
+    *@
+    <title>داشبورد</title>
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Proj_Atch/apple-icon-60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Proj_Atch/apple-icon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Proj_Atch/apple-icon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Proj_Atch/apple-icon-152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/Proj_Atch/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="~/Proj_Atch/favicon-32.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- BEGIN VENDOR CSS-->
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/bootstrap.css">
+    <!-- font icons-->
+    <link href="~/Proj_Atch/icomoon.css" rel="stylesheet" />
+    <link href="~/Proj_Atch/flag-icon-css/css/flag-icon.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/pace.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN ROBUST CSS-->
+    <link href="~/Proj_Atch/bootstrap-extended.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/app.css">
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/colors.css">
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/custom-rtl.css">
+    <!-- END ROBUST CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/vertical-overlay-menu.css">
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/palette-gradient.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="~/Proj_Atch/style-rtl.css">
+    <link href="~/Content/PersianDatePicker.css" rel="stylesheet" />
+    <link href="~/Content/sweetalert.css" rel="stylesheet" />
+    <!-- END Custom CSS-->
+
+
+
+    <link href="~/Content/Kendo/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="~/Content/Kendo/kendo.default-v2.min.css" rel="stylesheet" />
+
+    <script src="~/Proj_Atch/tether.min.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="~/Scripts/Kendo/kendo.all.min.js"></script>
+    <script src="~/Scripts/Kendo/kendo.aspnetmvc.min.js"></script>
+    <script src="~/Scripts/Asr/AsrMessageUtil.js"></script>
+    @*
+        <script src="~/Scripts/PersianDatePicker.min.js"></script>*@
+    <script src="~/Scripts/PersianDatePicker.js"></script>
+    <script src="~/Scripts/Asr/JavaScript.js"></script>
+    @*
+        <style>
+            .media {
+                overflow: auto !important;
+            }
+        </style>*@
+
+    <style type="text/css">
+
+
+        .modal_mohammad {
+            position: fixed;
+            z-index: 99999;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            background-color: Black;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            -moz-opacity: 0.8;
+            /*display: none;*/
+        }
+
+        .center_mohammad {
+            z-index: 100000;
+            margin: 350px auto;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 140px;
+            /*background-color: White;*/
+            border-radius: 10px;
+            filter: alpha(opacity=100);
+            opacity: 1;
+            -moz-opacity: 1;
+        }
+
+            .center_mohammad img {
+                height: 100px;
+                width: 100px;
+            }
+    </style>
+
+
+
+</head>
+<body data-open="click" data-menu="vertical-menu" data-col="2-columns" class="vertical-layout vertical-menu 2-columns  fixed-navbar k-rtl">
+    <!-- navbar-fixed-top-->
+    <nav class="header-navbar navbar navbar-with-menu navbar-fixed-top navbar-semi-dark navbar-shadow">
+        <div class="navbar-wrapper">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item mobile-menu hidden-md-up float-xs-left">
+                        <a class="nav-link nav-menu-main menu-toggle hidden-xs">
+                            <i class="icon-menu5 font-large-1"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="navbar-brand nav-link">
+                            @*<img alt="branding logo" src="../../Proj_Atch/Fedc-logo-light.png" data-expand="../../Proj_Atch/Fedc-logo-light.png" data-collapse="../../Proj_Atch/Fedc-logo-small.png" class="brand-logo" />*@
+                            <img alt="branding logo" src="~/Proj_Atch/Fedc-logo-light.png" data-expand="/Prsn_Serv_Site/Proj_Atch/Fedc-logo-light.png" data-collapse="/Prsn_Serv_Site/Proj_Atch/Fedc-logo-small.png" class="brand-logo" />
+                            @*<img alt="branding logo" src="~/Proj_Atch/Fedc-logo-light.png" data-expand="/Proj_Atch/Fedc-logo-light.png" data-collapse="/Proj_Atch/Fedc-logo-small.png" class="brand-logo" />*@
+                        </a>
+                    </li>
+                    <li class="nav-item hidden-md-up float-xs-right">
+                        <a data-toggle="collapse" data-target="#navbar-mobile" class="nav-link open-navbar-container">
+                            <i class="icon-ellipsis pe-2x icon-icon-rotate-right-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-container content container-fluid">
+                <div id="navbar-mobile" class="collapse navbar-toggleable-sm">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item hidden-sm-down">
+                            <a class="nav-link nav-menu-main menu-toggle hidden-xs">
+                                <i class="icon-menu5"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item hidden-sm-down">
+                            <a href="" target="#" class="btn btn-success upgrade-to-pro">بروزرسانی</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav float-xs-right">
+                        
+                            <li class="dropdown dropdown-language nav-item">
+                                <a id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link">
+                                    <i class="flag-icon flag-icon-ir"></i>
+                                    <span class="selected-language">فارسی</span>
+                                </a>
+                                <div aria-labelledby="dropdown-flag" class="dropdown-menu">
+                                    <a href="#" class="dropdown-item"><i class="flag-icon flag-icon-gb"></i> English</a>
+                                    <a href="#" class="dropdown-item"><i class="flag-icon flag-icon-ir"></i> فارسی</a>
+                                </div>
+                            </li>
+                        
+                            <li class="dropdown dropdown-notification nav-item">
+                                <a href="#" data-toggle="dropdown" class="nav-link nav-link-label">
+                                    <i class="ficon icon-bell4"></i>
+                                    <span class="tag tag-pill tag-default tag-danger tag-default tag-up">5</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                    <li class="dropdown-menu-header">
+                                        <h6 class="dropdown-header m-0">
+                                            <span class="grey darken-2">رخداد ها</span>
+                                            <span class="notification-tag tag tag-default tag-danger float-xs-right m-0">5 جدید</span>
+                                        </h6>
+                                    </li>
+                                    <li class="list-group scrollable-container">
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle">
+                                                    <i class="icon-cart3 icon-bg-circle bg-cyan"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">رخداد 1</h6>
+                                                    <p class="notification-text font-small-3 text-muted">توضیحات 1</p>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">1 دقیقه پیش</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle">
+                                                    <i class="icon-monitor3 icon-bg-circle bg-red bg-darken-1"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading red darken-1">رخداد 2</h6>
+                                                    <p class="notification-text font-small-3 text-muted">توضیحات 2</p>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">5 ساعت قبل</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle">
+                                                    <i class="icon-server2 icon-bg-circle bg-yellow bg-darken-3"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading yellow darken-3">رخداد 3</h6>
+                                                    <p class="notification-text font-small-3 text-muted">توضیحات 3</p>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">امروز</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle">
+                                                    <i class="icon-check2 icon-bg-circle bg-green bg-accent-3"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">رخداد 4</h6>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">هفته گذشته</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left valign-middle">
+                                                    <i class="icon-bar-graph-2 icon-bg-circle bg-teal"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">رخداد 5</h6>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">ماه گذشته</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu-footer">
+                                        <a href="javascript:void(0)" class="dropdown-item text-muted text-xs-center">تغییر وضعیت همه رخداد ها به خوانده شده</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                            <li class="dropdown dropdown-notification nav-item">
+                                <a href="#" data-toggle="dropdown" class="nav-link nav-link-label">
+                                    <i class="ficon icon-mail6"></i>
+                                    <span class="tag tag-pill tag-default tag-info tag-default tag-up">8</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                    <li class="dropdown-menu-header">
+                                        <h6 class="dropdown-header m-0">
+                                            <span class="grey darken-2">پیام ها</span>
+                                            <span class="notification-tag tag tag-default tag-info float-xs-right m-0">4 جدید</span>
+                                        </h6>
+                                    </li>
+                                    <li class="list-group scrollable-container">
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="~/Proj_Atch/avatar-s-1.png" alt="avatar">
+                                                        <i>
+                                                        </i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">شخص 1</h6>
+                                                    <p class="notification-text font-small-3 text-muted">پیام شخص 1</p>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">امروز</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-busy rounded-circle">
+                                                        <img src="~/Proj_Atch/avatar-s-2.png" alt="avatar">
+                                                        <i>
+                                                        </i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">شخص 2</h6>
+                                                    <p class="notification-text font-small-3 text-muted">پیام شخص 2</p>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">سه شنبه</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-online rounded-circle">
+                                                        <img src="~/Proj_Atch/avatar-s-3.png" alt="avatar">
+                                                        <i>
+                                                        </i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">شخص 3</h6>
+                                                    <p class="notification-text font-small-3 text-muted">پیام شخص 3</p>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">جمعه</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="javascript:void(0)" class="list-group-item">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <span class="avatar avatar-sm avatar-away rounded-circle">
+                                                        <img src="~/Proj_Atch/avatar-s-6.png" alt="avatar">
+                                                        <i>
+                                                        </i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">شخص 4</h6>
+                                                    <p class="notification-text font-small-3 text-muted">پیام شخص 4</p>
+                                                    <small>
+                                                        <time datetime="2015-06-11T18:29:20+08:00" class="media-meta text-muted">ماه گذشته</time>
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-menu-footer">
+                                        <a href="javascript:void(0)" class="dropdown-item text-muted text-xs-center">تغییر وضعیت همه پیام ها به خوانده شده</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link">
+                                <span class="avatar avatar-online">
+                                    <img src="~/Proj_Atch/avatar-s-1.png" alt="avatar">
+                                    @*<img src="data:image;base64, @IdentityUser.LogoImage" alt="avatar" />*@
+                                    @*<img src="data:image;base64, @ViewData[" LogoImage"]" alt="avatar" />*@
+                                    <i>
+                                    </i>
+                                </span>
+                                <span class="user-name">@IdentityUser.user-name</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                @*<a href="#" class="dropdown-item"><i class="icon-head"></i>تغییر تنظیمات</a>*@
+                                <a href="#" class="dropdown-item"><i class="icon-mail6"></i> پیام ها</a>
+                                @*<a href="#" class="dropdown-item"><i class="icon-clipboard2"></i> وظایف</a>*@
+                                @*<a href="#" class="dropdown-item"><i class="icon-calendar5"></i> تقویم</a>*@
+                                <div class="dropdown-divider">
+                                </div>
+                                <a href="@Url.Action("LogOff", "Account" , new { Area="" })" class="dropdown-item"><i class="icon-power3"></i> خروج</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main menu-->
+    <div data-scroll-to-active="true" class="main-menu menu-fixed menu-dark menu-accordion menu-shadow">
+        <!-- main menu header-->
+        <div class="main-menu-header">
+            <input type="text" placeholder="جستجو" class="menu-search form-control round" />
+        </div>
+        <!-- / main menu header-->
+        <!-- main menu content-->
+        <div class="main-menu-content">
+            <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+                <li class=" nav-item">
+                    <a href="index.html">
+                        <i class="icon-home3"></i>
+                        <span data-i18n="nav.dash.main" class="menu-title">درخواست</span>
+                        <span class="tag tag tag-primary tag-pill float-xs-right mr-2">2</span>
+                    </a>
+                    <ul class="menu-content">
+                        <li class="active">
+                            <a href="@Url.Action("a", "b" , new { Area="" })" data-i18n="nav.dash.main" class="menu-item">تست</a>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("a", "b" , new { Area="" })" data-i18n="nav.dash.main" class="menu-item">تغییر کلمه عبور</a>
+                        </li>
+                        <li>
+                            <a href="" data-i18n="nav.dash.main" class="menu-item">تست1</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                    <li class=" nav-item">
+                        <a href="#">
+                            <i class="icon-line-chart"></i>
+                            <span data-i18n="nav.page_layouts.main" class="menu-title">گزارشات</span>
+                            <span class="tag tag tag-primary tag-pill float-xs-right mr-2">5</span>
+                        </a>
+                        <ul class="menu-content">
+                            <li>
+                                <a href="" data-i18n="nav.page_layouts.1_column" class="menu-item">تست</a>
+                            </li>
+                            <li>
+                                <a href="" data-i18n="nav.page_layouts.2_columns" class="menu-item"> تست</a>
+                            </li>
+                            <li>
+                                <a href="" data-i18n="nav.page_layouts.boxed_layout" class="menu-item">تست</a>
+                            </li>
+
+                            <li>
+                                <a href="" data-i18n="nav.page_layouts.static_layout" class="menu-item"> تست</a>
+                            </li>
+                            <li class="navigation-divider">
+                            </li>
+                            <li>
+                                <a href="" data-i18n="nav.page_layouts.light_layout" class="menu-item">تست </a>
+                            </li>
+                            <li>
+                                <a href="" data-i18n="nav.page_layouts.dark_layout" class="menu-item">تست</a>
+                            </li>
+                            <li>
+                                <a href="" data-i18n="nav.page_layouts.semi_dark_layout" class="menu-item">تست </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" nav-item">
+                        <a href="">
+                            <i class="icon-dollar"></i>
+                            <span data-i18n="nav.changelog.main" class="menu-title">تست </span>
+                            <span class="tag tag tag-pill tag-danger float-xs-right">1</span>
+                        </a>
+                    </li>
+                
+                <li class=" navigation-header">
+                    <span data-i18n="nav.category.support">پشتیبانی</span>
+                    <i data-toggle="tooltip" data-placement="right" data-original-title="Support" class="icon-ellipsis icon-ellipsis"></i>
+                </li>
+                <li class=" nav-item">
+                    <a href="">
+                        <i class="icon-telephone"></i>
+                        <span data-i18n="nav.support_raise_support.main" class="menu-title">اطلاعات تماس</span>
+                    </a>
+                </li>
+                <li class=" nav-item">
+                    <a href="">
+                        <i class="icon-envelope"></i>
+                        <span data-i18n="nav.support_documentation.main" class="menu-title">ارسال تیکت</span>
+                    </a>
+                </li>
+                
+                <a href="#" onclick="DownloadHelpFile()">
+                        <i class="icon-help"></i>
+                        <span data-i18n="nav.support_documentation.main" class="menu-title">دریافت فایل راهنما</span>
+                    </a>
+                <!--</li>-->
+            </ul>
+        </div>
+        <!-- /main menu content-->
+        <!-- main menu footer-->
+        <!-- include includes/menu-footer-->
+        <!-- main menu footer-->
+    </div>
+    <!-- / main menu-->
+    <div class="app-content content container-fluid">
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- stats -->
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-xs-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-block">
+                                    <div class="media">
+                                        <div class="media-body text-xs-left">
+                                            <h3 class="pink">@IdentityUser.ContractCount</h3>
+                                            @*<span>تعداد قرارداد</span>*@
+                                        </div>
+                                        <div class="media-right media-middle">
+                                            <i class="icon-ios-paper-outline pink font-large-2 float-xs-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-xs-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-block">
+                                    <div class="media">
+                                        <div class="media-body text-xs-left">
+                                            <h3 class="teal">0</h3>
+                                            @*<span>پیام</span>*@
+                                        </div>
+                                        <div class="media-right media-middle">
+                                            <i class="icon-envelope-o teal font-large-2 float-xs-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-xs-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-block">
+                                    <div class="media">
+                                        <div class="media-body text-xs-left">
+                                            <h3 class="deep-orange">% @IdentityUser.AmalkardRiyali</h3>
+                                            @*<span>عملکرد ریالی</span>*@
+                                        </div>
+                                        <div class="media-right media-middle">
+                                            <i class="icon-diagram deep-orange font-large-2 float-xs-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-xs-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-block">
+                                    <div class="media">
+                                        <div class="media-body text-xs-left">
+                                            <h3 class="cyan">0</h3>
+                                            @*<span>تیکت</span>*@
+                                        </div>
+                                        <div class="media-right media-middle">
+                                            <i class="icon-ios-help-outline cyan font-large-2 float-xs-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ stats -->
+            </div>
+        </div>
+    </div>
+    <!--*********************************************** -->
+    <div class="app-content content container-fluid">
+        <div class="content-wrapper">
+            <div class="content-body">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-block">
+                                @*<div class="media">
+                                    <div class="media-body text-xs-left">
+                                *@
+
+                                @if (Request.UrlReferrer != null)
+                                {
+                                    <a class="btn btn-success upgrade-to-pro" style="font-size:small" onclick="history.go(-1); return false;" href="#">بازگشت</a><br />
+                                }
+                                @RenderBody()
+                                @*
+                                        </div>
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--*********************************************** -->
+    <footer class="footer footer-static footer-light navbar-border">
+        <p class="clearfix text-muted text-sm-center mb-0 px-2">
+            <span class="float-md-left d-xs-block d-md-inline-block"> @DateTime.Now.Year</span>
+            <span class="float-md-right d-xs-block d-md-inline-block">
+               
+                <i class="icon-dashboard2 pink"></i>
+            </span>
+        </p>
+    </footer>
+
+    <div id="LoadingForShow" class="modal_mohammad hidden">
+        <div class="center_mohammad">
+            <img src="~/images/loader4.gif" />
+        </div>
+    </div>
+
+
+    <!-- BEGIN VENDOR JS-->
+    @*
+        <script src="~/Proj_Atch/jquery.min.js" type="text/javascript"></script>
+        <script src="~/Proj_Atch/tether.min.js" type="text/javascript"></script>
+        <script src="~/Proj_Atch/bootstrap.min.js" type="text/javascript"></script>*@
+    <script src="~/Proj_Atch/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/unison.min.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/blockUI.min.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/jquery.matchHeight-min.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/screenfull.min.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/pace.min.js" type="text/javascript"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="~/Proj_Atch/chart.min.js" type="text/javascript"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN ROBUST JS-->
+    <script src="~/Proj_Atch/app-menu.js" type="text/javascript"></script>
+    <script src="~/Proj_Atch/app.js" type="text/javascript"></script>
+
+    <script src="~/Proj_Atch/sweetalert.min.js"></script>
+    @*
+        <script src="~/Proj_Atch/mm/sweetalert.min.js"></script>*@
+
+    <!-- END ROBUST JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    @*
+        <script src="~/Proj_Atch/dashboard-lite.js" type="text/javascript"></script> 14000409*@
+    <!-- END PAGE LEVEL JS-->
+
+    <script type="text/javascript">
+        function DownloadHelpFile(e) {
+            console.log("testmsg");
+            location.href = '@Url.Action("a", "b", new { Area = "" })'
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
